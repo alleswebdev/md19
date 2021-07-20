@@ -1,0 +1,31 @@
+{
+    "name": "alleswebdev/median-calculator",
+    "type": "library",
+    "description": "Recursive calculation of the median",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "Alles Alexey",
+            "email": "alleswebdev@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alleswebdev\\RecursiveSolution\\":"RecursiveSolution",
+            "Alleswebdev\\SortSolution\\":"SortSolution"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "Tests/"
+        }
+    },
+    "minimum-stability": "dev"
+}

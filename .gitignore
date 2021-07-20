@@ -1,0 +1,4 @@
+/vendor
+.phpunit.result.cache
+/.phpstorm.meta.php
+.idea

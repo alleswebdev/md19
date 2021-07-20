@@ -25,11 +25,11 @@ class Calculator
      */
     protected static function recursiveCalculation(array $houses, ?int $pivot = null, int $iter = 0): float
     {
-        if(!count($houses)){
-            throw new \BadFunctionCallException("THe count of $houses cann't be zero!");
-        }
-
         $totalCount = count($houses);
+
+        if(!$totalCount){
+            throw new \BadFunctionCallException("THe count of houses cann't be zero!");
+        }
 
         if ($iter > $totalCount) {
             echo "Сложность решения нелинейна :(";
@@ -73,17 +73,14 @@ class Calculator
             }
         }
 
-        // чудо
         if ($lessCount === $greaterCount) {
             return $pivot;
         }
 
-        // нашли медиану в чётных
         if (($lessCount + $pivotCount) == $greaterCount) {
             return ($minGreater + $pivot) / 2;
         }
 
-        // в нечётных повторяется опорный, но опорный является медианой
         if ((($greaterCount + $pivotCount) > $lessCount) && ($lessCount > $greaterCount)) {
             return $pivot;
         }
